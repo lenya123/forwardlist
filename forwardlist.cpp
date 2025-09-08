@@ -1,6 +1,5 @@
 #include <iostream>
 #include <memory>
-#include <stdexcept>
 
 template <typename T>
 class ForwardList {
@@ -35,7 +34,7 @@ public:
 
     const T& front() const {
         if (empty()) {
-            throw std::runtime_error("List is empty");
+            return;
         }
         return head->data;
     }
